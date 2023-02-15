@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  frontend:
+    container_name: frontend
+    working_dir: /app
+    build: .
+    restart: always
+    ports:
+      - '3000:5173'
