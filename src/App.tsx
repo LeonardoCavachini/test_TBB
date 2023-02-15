@@ -1,8 +1,15 @@
-import {SectionContainer} from './components/sectionContainer'
+import { useState } from 'react';
+import {SectionContainer} from './components/sectionContainer';
+import {Header} from './components/header';
+
 function App() {
+  const [productName, setProductName] = useState('');
+  console.log(productName)
   return (
     <SectionContainer>
-      <h1>hello world</h1>
+      <Header onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          setProductName(e.target.value);
+      }}/>
     </SectionContainer>
   )
 }
