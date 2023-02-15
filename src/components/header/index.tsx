@@ -3,8 +3,10 @@ import SearchIcon from '../../assets/search.svg';
 
 export const Header = ({
   onChange,
+  onClick
 }: {
   onChange: React.ChangeEventHandler;
+  onClick: React.ImgHTMLAttributes<HTMLImageElement>["onClick"]
 }) => {
   return (
     <>
@@ -16,7 +18,7 @@ export const Header = ({
       </styled.IconBox>
     </styled.Main>
     <styled.searchIcon>
-      <img src={SearchIcon} />
+      <img src={SearchIcon} onClick={onClick}/>
     </styled.searchIcon>
     <styled.InputField onChange={onChange} placeholder='Busque aqui...' />
     </>
