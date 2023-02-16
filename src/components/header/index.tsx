@@ -1,17 +1,30 @@
 import * as styled from './styles';
 import SearchIcon from '../../assets/search.svg';
 
+
 export const Header = ({
   onChange,
-  onClick
+  onClick,
+  open,
+  setOpen,
+  children
 }: {
   onChange: React.ChangeEventHandler;
-  onClick: React.ImgHTMLAttributes<HTMLImageElement>["onClick"]
+  onClick: React.ImgHTMLAttributes<HTMLImageElement>["onClick"];
+  open: any;
+  setOpen: any;
+  children: any
 }) => {
   return (
     <>
+      <styled.StyledBurger props={open}>
+        <styled.IconClose onClick={() => setOpen(false)}/>
+        {children}
+      </styled.StyledBurger>
       <styled.Main>
-      <styled.BurguerIcon />
+      
+      <styled.BurguerIcon onClick={() => setOpen(true)}/>
+      
       <styled.IconBox>
         <styled.CartIcon />
         <styled.UserIcon />

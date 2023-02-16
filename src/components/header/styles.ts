@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 
 export const Main = styled.div`
@@ -38,6 +38,9 @@ export const BurguerIcon = styled.div`
   width: 4rem;
   margin-top: 2rem;
   margin-left: 1rem;
+  @media (min-width: 1045px) {
+    display: none;
+  }
 `
 export const InputField = styled.input`
   height: 5rem;
@@ -60,3 +63,48 @@ export const searchIcon = styled.div`
   width: 2.5rem;
   height: 2.5rem;
   `
+  export const StyledBurger = styled.section`
+  position: absolute;
+  backdrop-filter: blur(2px);
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width: 30rem;
+  height: auto;
+  z-index:1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, #F1F1F1 0%, #F7B094 35%, #F5717F 100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+  transform: translateX(50px);
+  div {
+    position:absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: rotate(45deg);
+    transition: 1.5s;
+  }
+  ${({props}:any) => props && css`
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0px);
+    div {
+     transform: rotate(0deg) ;
+    }
+  `}
+`;
+export const IconClose = styled.div`
+  background-image: url(/src/assets/menuClose.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  height: 4.5rem;
+  width: 4rem;
+`;
