@@ -18,6 +18,7 @@ declare module "styled-components" {
       small: string
       medium: string
       large: string
+      xlarge: string
     }
     media: {
       lteMedium: string

@@ -4,6 +4,7 @@ import styled from "styled-components"
 export const Main = styled.div`
   background-color:  ${({ theme }) => theme.colors.primary};
   height: 8rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 `

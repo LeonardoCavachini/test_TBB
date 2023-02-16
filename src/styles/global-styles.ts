@@ -12,5 +12,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: ${({ theme }) => theme.font.default};
+    color: #FFFFFF;
   }
 `
