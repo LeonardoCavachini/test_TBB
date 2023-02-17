@@ -1,6 +1,6 @@
-import axios from "axios";
+import base from '../../mock/db.json'
 
-export async function getProducts() {
-  const { data } = await axios.get("http://localhost:3000/data");
+export function getProducts() {
+  const { data } = base;
   return data.nodes
 };

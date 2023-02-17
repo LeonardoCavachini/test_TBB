@@ -25,6 +25,9 @@ export const emailInput = styled.input`
   margin-top: 2rem;
   margin-left: 1rem;
   padding-left: 1rem;
+  @media screen and (min-width: 1024px){
+    font-size: ${({ theme }) => theme.sizes.medium};
+  }
 `;
 export const buttonFake = styled.div`
   font-weight: 700;
@@ -38,4 +41,10 @@ export const buttonFake = styled.div`
   top: -30%;
   padding: 1.5rem;
   padding-left: 1rem;
+  @media screen and (min-width: 1024px){
+    left: 87%;
+  }
+  @media screen and (min-width: 1920px){
+    left: 89.7%;
+  }
 `;

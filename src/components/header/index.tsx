@@ -22,18 +22,16 @@ export const Header = ({
         {children}
       </styled.StyledBurger>
       <styled.Main>
-      
-      <styled.BurguerIcon onClick={() => setOpen(true)}/>
-      
-      <styled.IconBox>
-        <styled.CartIcon />
-        <styled.UserIcon />
-      </styled.IconBox>
-    </styled.Main>
-    <styled.searchIcon>
-      <img src={SearchIcon} onClick={onClick}/>
-    </styled.searchIcon>
-    <styled.InputField onChange={onChange} placeholder='Busque aqui...' />
+        <styled.BurguerIcon onClick={() => setOpen(true)}/>
+        <styled.IconBox>
+          <styled.CartIcon />
+          <styled.UserIcon />
+        </styled.IconBox>
+      </styled.Main>
+      <styled.searchIcon>
+        <img src={SearchIcon} onClick={onClick}/>
+      </styled.searchIcon>
+      <styled.InputField onChange={onChange} placeholder='Busque aqui...' />
     </>
   )
 }

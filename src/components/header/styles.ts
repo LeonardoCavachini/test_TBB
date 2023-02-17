@@ -12,9 +12,15 @@ export const IconBox = styled.div`
   display: flex;
   justify-content: space-between;
   width:11rem;
- 
   padding: 1rem;
   padding-top: 2rem;
+  @media screen and (min-width: 1024px){
+    position: absolute;
+    left: 85%;
+  }
+  @media screen and (min-width: 1920px){
+    left: 88%;
+  }
 `;
 export const CartIcon = styled.div`
   height: 3.5rem;
@@ -54,14 +60,35 @@ export const InputField = styled.input`
   transition: 0.3s;
   padding-left: 4rem;
   cursor: pointer;
+  @media screen and (min-width: 1024px){
+    font-size: ${({ theme }) => theme.sizes.xlarge};
+    padding-left: 5.5rem;
+    position: absolute;
+    width: 50%;
+    top: 2.3%;
+    left: 25%;
+  }
+  @media screen and (min-width: 1920px){
+    left: 25%;
+    padding-left: 6rem;
+    top: 1.5%;
+  }
 `;
 
 export const searchIcon = styled.div`
   position: absolute;
   left: .5rem;
   top: 10%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  @media screen and (min-width: 1024px){
+    z-index: 1;
+    left: 26%;
+    top: 4.5%;
+  }
+  @media screen and (min-width: 1920px){
+    top: 2.6%;
+  }
   `
   export const StyledBurger = styled.section`
   position: absolute;

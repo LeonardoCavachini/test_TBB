@@ -22,6 +22,9 @@ export const TitleBox = styled.div`
   color: ${({ theme }) => theme.colors.Title};
   line-height: 1.6rem;
   margin: 5.3rem auto;
+  @media screen and (min-width: 1024px){
+    font-size: ${({ theme }) => theme.sizes.large};
+  }
 `;
 export const SocialBox = styled.div`
   background-image: url(/src/assets/social.svg);
@@ -30,6 +33,12 @@ export const SocialBox = styled.div`
   width: 20rem;
   height: 6rem;
   margin-left: 10rem;
+  @media screen and (min-width: 1024px){
+    margin-left: 42.5%;
+  }
+  @media screen and (min-width: 1920px){
+    margin-left: 44.7%;
+  }
 `;
 export const PaymentBox = styled.div`
   background-image: url(/src/assets/cartoes.svg);
@@ -38,5 +47,10 @@ export const PaymentBox = styled.div`
   width: 20rem;
   height: 5rem;
   margin-left: 10rem;
-
+  @media screen and (min-width: 1024px){
+    margin-left: 42.5%;
+  }
+  @media screen and (min-width: 1920px){
+    margin-left: 44.7%;
+  }
 `;

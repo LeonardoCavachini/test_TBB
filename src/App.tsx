@@ -9,6 +9,8 @@ import { Card } from './components/card';
 import { Container } from './components/container';
 import {Filter} from './components/filter/index';
 
+import {HiddenFilter} from './components/hiddenFilter';
+
 function App() {
   const [productName, setProductName] = useState('');
   const [products, setProducts] = useState([]);
@@ -43,11 +45,14 @@ function App() {
     <SectionContainer>
       <Header onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           setProductName(e.target.value);
-      }} onClick={() => checkName()} open={open} setOpen={setOpen}><Filter onClick={() => filterHandle()} categories={categories} setCategories={setCategories}/></Header>
+        }} onClick={() => checkName()} open={open} setOpen={setOpen}><Filter onClick={() => filterHandle()} categories={categories} setCategories={setCategories}/>
+      </Header>
+      <HiddenFilter>
+        <Filter onClick={() => filterHandle()} categories={categories} setCategories={setCategories}/>
+      </HiddenFilter>
       <Container>
         {products.map((elem: any, idx:number) => <Card key={idx} url={elem.images[0].asset.url} name={elem.name} alt={elem.images[0].alt}/>)}
       </Container>
-      
       <NewsSection />
       <SocialSection />
       <Footer />
